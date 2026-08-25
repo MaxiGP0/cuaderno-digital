@@ -1,4 +1,4 @@
-# Cuaderno Digital / Pizarra Multijugador Pro 🎨📚
+# Cuaderno Digital / Pizarra Online 🎨📚
 
 Aplicación web interactiva y colaborativa en tiempo real diseñada como un cuaderno digital y pizarra virtual avanzada. Permite a múltiples usuarios crear, organizar y editar pizarras simultáneamente con herramientas profesionales de dibujo, gestión de proyectos y control de acceso.
 

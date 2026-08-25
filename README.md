@@ -1,182 +1,73 @@
-🎨 Cuaderno Pro - Pizarra Digital Colaborativa
-
-Cuaderno Pro es una plataforma web de pizarra digital interactiva diseñada para el estudio grupal, la diagramación y la colaboración en tiempo real.
-Permite a múltiples usuarios interactuar en un mismo lienzo infinito, importar documentos, y organizar sus proyectos en la nube.
-
-
-Se puede probar en:
-
-https://cuaderno-digital-1.onrender.com
-
-
-
-✨ Características Principales ----------------------------------------------------------------
-
-
-🤝 Colaboración en Tiempo Real
-
-- Multijugador fluido: Dibuja, escribe y mueve elementos viendo los cursores y nombres de otros usuarios en vivo (vía WebSockets).
-
-- Control de Acceso: Sistema de permisos donde el creador de la sala debe aprobar la entrada de los invitados (Notificaciones UI estilo Toast).
-
-- Bifurcación de Salas (Fork): Los invitados pueden clonar y guardar una copia exacta de la pizarra del anfitrión en sus propias cuentas antes de salir.
-
-
-
-🛠️ Herramientas de Edición Avanzadas
-
-- Lápiz y Goma: Trazos a mano alzada con grosor y color dinámico.
-
-- Formas Geométricas: Líneas, flechas, rectángulos, círculos, rombos, triángulos y estrellas.
-
-- Puntero Láser: Rastro efímero de color rojo neón para señalar elementos durante una explicación sin manchar el lienzo.
-
-- Notas Adhesivas (Sticky Notes): Cajas de texto con estilo post-it color amarillo pastel.
-
-- Sistema de Capas: Opciones para traer elementos al frente o enviarlos al fondo.
-
-- Historial de Estados: Funciones completas de Deshacer (Undo) y Rehacer (Redo).
-
-- Portapapeles: Copiar y pegar elementos rápidamente con atajos de teclado (Ctrl+C / Ctrl+V).
-
-
-
-
-📄 Manejo de Medios y Documentos
-
-- Soporte Nativo para PDFs: Integración con Mozilla pdf.js para renderizar documentos multipágina directamente en el lienzo con alta resolución.
-
-- Gestión de Imágenes: Subida de imágenes locales con auto-redimensionado para optimizar el rendimiento.
-
-- Herramienta de Recorte (Crop): Dibuja un área sobre cualquier imagen o PDF para recortarlo de forma destructiva y mantener solo la información necesaria.
-
-- Exportación: Guarda el estado actual de la pizarra como una imagen .JPG de alta calidad.
-
-
-
-
-🗺️ Navegación y UI/UX
-
-- Lienzo Infinito: Herramienta panorámica (Pan) y zoom (rueda del mouse o pellizco en pantallas táctiles).
-
-- Minimapa: Ventana flotante para ubicarte rápidamente en lienzos masivos.
-
-- Diseño Responsive (Mobile-First): Interfaz adaptada para celulares y tablets, con menús ocultables (hamburguesa) y barras de herramientas deslizables con efecto Glassmorphism.
-
-
-
-
-🔐 Sistema de Cuentas (Dashboard)
-
-- Autenticación Segura: Registro e inicio de sesión con contraseñas encriptadas (bcrypt) y tokens de sesión (JWT).
-
-- Gestión de Perfil: Cambio de contraseña integrado.
-
-- Organización: Creación de carpetas personalizadas para agrupar y filtrar proyectos.
-
-
-💻 Tecnologías Utilizadas ----------------------------------------------------------------
-
-
-- Frontend:
-
-  - HTML5 / CSS3 (Animaciones personalizadas, Flexbox, CSS Grid).
-
-  - Vanilla JavaScript (ES6+).
-
-  - PDF.js (Renderizado de documentos).
-
-
-
-- Backend:
-
-  - Node.js & Express.js (Servidor y API REST).
-
-  - Socket.io (Comunicación bidireccional y sincronización de eventos).
-
-  - MongoDB & Mongoose (Persistencia de datos y usuarios).
-
-  - JWT & Bcrypt.js (Seguridad).
-
-
-🚀 Instalación y Uso Local ----------------------------------------------------------------
-
-Sigue estos pasos para correr el proyecto en tu propia computadora:
-
-
-- Clonar el repositorio:
-
-
-  - git clone https://github.com/MaxiGP0/cuaderno-digital
-
-  - cd cuaderno-digital
-
-
-
-- Instalar las dependencias:
-
-  - npm install
-
-
-
-- Configurar las variables de entorno:
-
-  - Crea un archivo .env en la raíz del proyecto y añade tus credenciales:
-
-  - PORT=3000
-
-  - MONGO_URI=tu_cadena_de_conexion_de_mongodb
-
-  - JWT_SECRET=tu_clave_secreta
-
-
-- Iniciar el servidor:
-
-  - npm start
-
-- Abrir la aplicación:
-
-  - Abrir http://localhost:3000 en tu navegador web.
-
-
-
-📂 Estructura del Proyecto
-
-
-cuaderno-digital/
-
-├── public/                 # Archivos estáticos del Frontend
-
-│   ├── index.html          # Dashboard y gestión de carpetas
-
-│   ├── login.html          # Interfaz de Autenticación
-
-│   ├── pizarra.html        # Lienzo principal y herramientas
-
-│   ├── script.js           # Lógica de dibujo, WebSockets y UI
-
-│   └── style.css           # Hoja de estilos global
-
-├── server.js               # Servidor Express, API de usuarios y Socket.io
-
-├── package.json            # Dependencias del proyecto
-
-└── .env                    # Variables de entorno (No incluido en el repo)
-
-
-
-🤝 Contribuciones ----------------------------------------------------------------
-
-- Este proyecto fue creado con el objetivo de facilitar el estudio y la diagramación rápida.
-
-- Si tienes ideas para mejorarlo, ¡las Pull Requests son bienvenidas!:
-
-  - Haz un Fork del proyecto.
-
-  - Crea una rama para tu nueva característica (git checkout -b feature/NuevaCaracteristica).
-
-  - Haz commit de tus cambios (git commit -m 'Añadir nueva característica').
-
-  - Haz Push a la rama (git push origin feature/NuevaCaracteristica).
-
-  - Abre un Pull Request.
+# Cuaderno Digital / Pizarra Multijugador Pro 🎨📚
+
+Aplicación web interactiva y colaborativa en tiempo real diseñada como un cuaderno digital y pizarra virtual avanzada. Permite a múltiples usuarios crear, organizar y editar pizarras simultáneamente con herramientas profesionales de dibujo, gestión de proyectos y control de acceso.
+
+---
+
+## 🚀 Tecnologías Principales (Stack)
+
+- **Backend:** Node.js, Express, Socket.io (WebSockets).
+- **Base de Datos:** MongoDB (con Mongoose).
+- **Autenticación y Seguridad:** JSON Web Tokens (JWT), bcryptjs para encriptación de contraseñas.
+- **Frontend:** HTML5 Canvas, CSS3, JavaScript (Vanilla), PDF.js (renderizado de documentos PDF).
+
+---
+
+## ⭐ Funcionalidades Importantes
+
+### 1. Sistema de Autenticación y Seguridad
+- **Registro e Inicio de Sesión:** Cuentas de usuario protegidas con contraseñas encriptadas mediante `bcryptjs` y sesiones manejadas con tokens JWT (expiración de 7 días).
+- **Gestión de Perfil:** Opción segura para cambiar la contraseña actual desde el panel de usuario.
+- **Control de Acceso por Roles:** Las salas/pizarras tienen un **propietario (dueño)** y **invitados**. Los invitados deben solicitar acceso y esperar la aprobación en tiempo real del dueño de la sala.
+
+### 2. Gestión de Proyectos y Organización por Carpetas
+- **Dashboard Personal (`index.html`):** Visualización de todas las pizarras creadas en una cuadrícula moderna.
+- **Organización en Carpetas:** Clasificación de proyectos por carpetas personalizadas (ej. *Principal*, *Álgebra*, *General*, etc.) con filtrado dinámico desde la barra lateral.
+- **Operaciones CRUD:** Renombrar pizarras, cambiar de carpeta, eliminar proyectos y **clonar copias** (permite a los invitados guardar una copia personal de una sala colaborativa en su cuenta).
+
+### 3. Colaboración Multijugador en Tiempo Real (Socket.io)
+- **Sincronización Instantánea:** Todos los trazos, formas, textos e imágenes se actualizan en tiempo real para todos los participantes de la sala.
+- **Cursores Fantasma:** Visualización en vivo de la posición y nombre de los colaboradores conectados en la pizarra.
+- **Modo Seguimiento:** Posibilidad de seguir la vista y el cursor de cualquier usuario activo en tiempo real.
+- **Aprobación de Invitados:** Notificaciones flotantes (toasts) para que el dueño de la sala acepte o rechace la entrada de nuevos usuarios.
+
+### 4. Herramientas Avanzadas de Dibujo y Pizarra
+- **Lápiz y Goma:** Trazos fluidos con control de color y grosor de línea ajustable.
+- **Puntero Láser:** Herramienta de anotación temporal en tiempo real con efecto brillante y desvanecimiento automático.
+- **Notas Adhesivas (Sticky Notes):** Creación de notas de colores con ajuste automático de texto.
+- **Texto Flotante:** Inserción y edición de texto tipográfico directamente sobre el lienzo.
+- **Formas Geométricas Inteligentes:** Popup flotante adaptativo con selección de líneas, flechas, rectángulos (normales y redondeados), círculos/elipses, rombos, triángulos y estrellas.
+
+### 5. Importación y Procesamiento Multimedia
+- **Subida de Imágenes:** Compresión automática y posicionamiento dinámico de imágenes en el lienzo.
+- **Importación de PDFs:** Carga y conversión de documentos PDF multipágina directamente en la pizarra utilizando **PDF.js**, ordenando las páginas verticalmente.
+- **Herramienta de Recorte (Crop):** Selección de áreas específicas de imágenes o PDFs para recortar y conservar sólo la sección deseada.
+
+### 6. Navegación, Minimapa y Capas
+- **Minimapa Interactivo:** Vista general en miniatura del lienzo completo con indicador de la cámara actual y navegación mediante clics.
+- **Zoom y Pandeo (Pan):** Desplazamiento fluido por el lienzo infinito y zoom mediante rueda del mouse o gestos táctiles (pinch).
+- **Control de Capas y Historial:** Opciones para traer elementos al frente o enviar al fondo, además de un sistema robusto de **Deshacer (Undo)** y **Rehacer (Redo)** (Ctrl+Z / Ctrl+Y).
+- **Exportación:** Función para exportar la pizarra completa a formato JPG de alta calidad centrada en el contenido.
+
+---
+
+## 🛠️ Instalación y Configuración
+
+1. **Clonar el repositorio e instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+2. **Configurar las variables de entorno:**
+   Crea un archivo `.env` en la raíz del proyecto con la siguiente estructura:
+   ```env
+   PORT=3000
+   MONGO_URI=tu_cadena_de_conexion_mongodb
+   JWT_SECRET=tu_llave_secreta_jwt
+   ```
+
+3. **Ejecutar el servidor:**
+   ```bash
+   npm start
+   ```
+   Abre tu navegador en `http://localhost:3000`.
